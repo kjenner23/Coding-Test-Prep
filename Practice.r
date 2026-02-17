@@ -19,7 +19,7 @@ df$hourly_wage <- df$earnings / df$hours
 model <- lm(hourly_wage ~ female + education, data = df)
 print(summary(model))
 
-png("figures/education_wage_plot.png")
+png("outputs/figures/education_wage_plot.png")
 
 plot(df$education, df$hourly_wage,
 main = "Hourly Wage vs Education",
