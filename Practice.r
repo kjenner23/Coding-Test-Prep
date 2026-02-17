@@ -17,4 +17,12 @@ df <- df[!is.na(df$earnings), ]
 df$hourly_wage <- df$earnings / df$hours
 
 model <- lm(hourly_wage ~ female + education, data = df)
-summary(model)
+print(summary(model))
+
+png("education_wage_plot.png")
+
+plot(df$education, df$hourly_wage,
+main = "Hourly Wage vs Education",
+xlab = "Education (years)",
+ylab = "Hourly Wage")
+
