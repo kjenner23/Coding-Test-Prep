@@ -26,4 +26,7 @@ main = "Hourly Wage vs Education",
 xlab = "Education (years)",
 ylab = "Hourly Wage")
 
+abline(lm(hourly_wage ~ education, data = df),
+col = "red", lwd = 2)
+
 dev.off()
